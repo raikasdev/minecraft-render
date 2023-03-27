@@ -17,7 +17,7 @@ export class RenderTest {
 
     const renderCandidates = pickBlocks(blocks);
 
-    for await (const render of this.minecraftTest.minecraft.render(renderCandidates, {width:16,height:16,animation:false,distance:13})) {
+    for await (const render of this.minecraftTest.minecraft.render(renderCandidates, {width:32,height:32,animation:false,distance:11})) {
       if (!render.buffer) {
         console.log('Rendering skipped ' + render.blockName + ' reason: ' + render.skip!);
         continue;
